@@ -3,19 +3,11 @@
 /* ---------------------------------------------------------------------- */
 
 
-<<<<<<< HEAD
-/* let firstValue = Number(prompt("덧셈할 첫 번째 숫자를 입력해주세요.", 10));
-let secondValue = +prompt("덧셈할 두 번째 숫자를 입력해주세요.", 2); */
-
-
-// console.log(firstValue + secondValue);
-=======
 let firstValue = Number(prompt("덧셈할 첫 번째 숫자를 입력해주세요.", 10));
 let secondValue = +prompt("덧셈할 두 번째 숫자를 입력해주세요.", 2);
 
 
 console.log(firstValue + secondValue);
->>>>>>> 15d7fa3ffa6215f4e907e1d08063c26895b8d75a
 // console.log(typeof secondValue);
 
 
@@ -29,17 +21,6 @@ console.log(firstValue + secondValue);
 // 연산자(演算子): 연산을 표시하기 위한 기호
 // 피연산자(被演算子): 처리 대상
 
-<<<<<<< HEAD
-// let a = '10';
-// let b = '30';
-// console.log(a,b);
-
-// 단항 연산자 → 피연산자 갯수가 1개 
-// let unary = +a;
-
-// 이항 연산자 → 피연산자 갯수가 2개
-// let binary = a + b;
-=======
 let a = '10';
 let b = '30';
 
@@ -49,7 +30,6 @@ let unary = +a;
 
 // 이항 연산자 → 피연산자 갯수가 2개
 let binary = a + b;
->>>>>>> 15d7fa3ffa6215f4e907e1d08063c26895b8d75a
 
 // 삼항 연산자 → 피연산자 갯수가 3개
 let ternary = Math.random() > 0.5 ? 'big' : 'small';
@@ -117,25 +97,6 @@ console.log(number);
 // 그리고 연산자 우선 순위에 따라 연산 과정을 유추해보세요.
 
 let count = 10;
-<<<<<<< HEAD
-let total = (count % 4) * (count /= 2) + count ** 3; 
-console.log(total);
-
-
-// let count = 10;
-// let total = count % 4// * 
-
-// count = count / 2; // +
-
-// let countPower3 = count ** 3;
-
-
-// total = total * count + countPower3;
-
-
-
-
-=======
 let total = count % 4// * 
 
 count = count / 2; // +
@@ -149,7 +110,6 @@ total = total * count + countPower3;
 console.log(total);
 
 
->>>>>>> 15d7fa3ffa6215f4e907e1d08063c26895b8d75a
 
 
 
