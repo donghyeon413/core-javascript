@@ -43,6 +43,14 @@
       // var result = x % 2 ? '홀' : '짝';
       // console.log(result);
 
-      const grade = prompt("점수를 입력해주세요.")
-let result = grade >= 60 ? alert("합격입니다") : alert("불합격입니다")
+      // var x = 2;
+      // var result;
+      
+      // if (x % 2) {
+      //   result = '홀수' ;
+      // } else {
+      //   result = '짝수' ;
+      // }
+      
+      // console.log(result); 
       
