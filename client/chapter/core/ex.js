@@ -54,3 +54,7 @@
       
       // console.log(result); 
       
+      var x = 2;
+
+var result = x % 2 ? '홀' : '짝';
+console.log(result);
