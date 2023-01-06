@@ -21,12 +21,46 @@
 
 /* 문서 대상 찾기 */
 // - getElementById
-// - getElementsByTagName
+// - getElementsByTagName 
 // - getElementsByClassName
 // - querySelector
 // - querySelectorAll
 // - closest
 
+
+// let first = document.querySelector('.first');
+
+let [first,second] = document.querySelectorAll('span');
+
+
+// console.log(second);
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
 /* 문서 대상 확인 */
 // - matches
 // - contains
+
+
+
+
+
+
+
+
+
+
+
+
