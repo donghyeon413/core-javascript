@@ -13,6 +13,6 @@ module.exports = {
     },
     "rules": {
         "no-unused-vars":'off',
-        "no-undef":'warn'
+        "no-undef":'off'
     }
 }
