@@ -30,13 +30,10 @@ import {
 // 3. 템플릿 뿌리기 
 
 
-
 // 배열의 구조 분해 할당 
 const [rollingDiceButton,recordButton,resetButton] = getNodes('.buttonGroup > button');
 
 const recordListWrapper = getNode('.recordListWrapper')
-
-
 
 
 function renderRecordListItem(){
@@ -47,9 +44,6 @@ function renderRecordListItem(){
 
 
 
-/* -------------------------------------------------------------------------- */
-/* event                                                                      */
-/* -------------------------------------------------------------------------- */
 
 const handleRollingDice = (() => {
  
@@ -80,9 +74,7 @@ const handleRollingDice = (() => {
 
 const handleRecord =()=>{
   
-  visibleElement(recordListWrapper);
-
-  renderRecordListItem();
+  visibleElement(recordListWrapper)
 }
 
 const handleReset = () => {
