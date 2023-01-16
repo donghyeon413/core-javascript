@@ -6,6 +6,7 @@ import {
   enableElement, 
   getNode, 
   getNodes,
+  insertLast,
   visibleElement,
   invisibleElement
  } from "./lib/index.js";
@@ -30,13 +31,27 @@ import {
 // 3. 템플릿 뿌리기 
 
 
+
 // 배열의 구조 분해 할당 
 const [rollingDiceButton,recordButton,resetButton] = getNodes('.buttonGroup > button');
 
 const recordListWrapper = getNode('.recordListWrapper')
 
 
+// 특정 대상의 속성값을 가져오거나 / 설정할  수 있는 함수
+
 function renderRecordListItem(){
+  
+  let template = /* html */ `
+    <tr>
+      <td>0</td>
+      <td>5</td>
+      <td>5</td>
+    </tr>
+  `
+  
+  insertLast('.recordListWrapper tbody',template)
+  
   
 }
 
@@ -44,6 +59,9 @@ function renderRecordListItem(){
 
 
 
+/* -------------------------------------------------------------------------- */
+/* event                                                                      */
+/* -------------------------------------------------------------------------- */
 
 const handleRollingDice = (() => {
  
@@ -74,7 +92,8 @@ const handleRollingDice = (() => {
 
 const handleRecord =()=>{
   
-  visibleElement(recordListWrapper)
+  visibleElement(recordListWrapper);
+  renderRecordListItem();
 }
 
 const handleReset = () => {
