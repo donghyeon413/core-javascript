@@ -1,6 +1,12 @@
 
 
-import { diceAnimation, getNode } from "./lib/index.js";
+import { 
+  diceAnimation, 
+  disableElement, 
+  enableElement, 
+  getNode, 
+  getNodes
+ } from "./lib/index.js";
 
 
 // [ 주사위 굴리기 ]
@@ -16,10 +22,13 @@ import { diceAnimation, getNode } from "./lib/index.js";
 // 4. visible 활성 유틸 함수 만들기
 // 5. toggleState 유틸 함수 만들기 
 
+// 배열의 구조 분해 할당 
+const [rollingDiceButton,recordButton,resetButton] = getNodes('.buttonGroup > button');
 
-
-
-const rollingDiceButton = getNode('.buttonGroup > button:nth-child(1)');
+// console.log(button);
+// const rollingDiceButton = getNode('.buttonGroup > button:nth-child(1)');
+// const recordButton = getNode('.buttonGroup > button:nth-child(2)');
+// const resetButton = getNode('.buttonGroup > button:nth-child(3)');
 
 
 
@@ -37,9 +46,16 @@ const handlerRollingDice = (() => {
     if(!isRolling){
       // console.log('첫번째 클릭');
       stopAnimation = setInterval(diceAnimation,100)
+      
+      disableElement(recordButton)
+      disableElement(resetButton)
+      
+      
     }else{
       // console.log('두번째 클릭');
       clearInterval(stopAnimation);
+      enableElement(recordButton)
+      enableElement(resetButton)
     }
   
     isRolling = !isRolling;
@@ -54,6 +70,7 @@ const handlerRollingDice = (() => {
 rollingDiceButton.addEventListener('click',handlerRollingDice)
 
 // let eventOff = bindEvent(rollingDiceButton,'click',handlerRollingDice);
+
 
 
 

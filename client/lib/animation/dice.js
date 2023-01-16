@@ -1,4 +1,4 @@
-/* gloval gsap */
+/* global gsap */
 
 import { attr } from "../dom/attr.js";
 import { getNode } from '../dom/getNode.js'
