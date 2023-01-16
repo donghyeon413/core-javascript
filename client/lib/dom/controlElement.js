@@ -3,9 +3,14 @@ import { isElement } from "../utils/typeOf.js";
 
 
 
+//JSDoc
 
-
-
+/**
+ * 
+ * @function isElement checkElement
+ * @param {HTMLElement} node
+ * @return set disabled
+*/
 export function disableElement(node){
 
   if(!isElement(node)){
@@ -22,6 +27,8 @@ export function enableElement(node){
   
   node.disabled = false;
 }
+
+disableElement()
 
 
 
