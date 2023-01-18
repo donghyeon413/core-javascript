@@ -224,35 +224,49 @@ export function xhrPromise(options = {}){
 
 
 
-xhrPromise({
-  url:'https://jsonplaceholder.typicode.com/users/1'
-})
-.then((res)=>{
-  console.log(res);
-})
-.catch((err)=>{
-  console.log(err);
-})
+// xhrPromise({
+//   url:'https://jsonplaceholder.typicode.com/users/1'
+// })
+// .then((res)=>{
+//   console.log(res);
+// })
+// .catch((err)=>{
+//   console.log(err);
+// })
 
 
-xhrPromise.get = (url) =>{
+
+xhrPromise.get = (url) => {
   return xhrPromise({
     url
   })
-
-
 }
 
 
-xhrPromise
-.get('www.naver.com')
-.then((res)=>{
-  res
-})
-.catch((err)=>{
-  err
-})
+xhrPromise.post = (url,body) => {
+  return xhrPromise({
+    url,
+    body,
+    method:'POST'
+  })
+}
 
+
+xhrPromise.put = (url,body) => {
+  return xhrPromise({
+    url,
+    body,
+    method:'PUT'
+  })
+}
+
+
+xhrPromise.delete = (url) => {
+  return xhrPromise({
+    url,
+    method:'DELETE'
+  })
+}
 
 
 
