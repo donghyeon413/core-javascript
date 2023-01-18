@@ -86,9 +86,9 @@ export function delayP(options = {}){
 }
 
 
-// delayP(3000).then((res)=>{
-//   console.log(res); // 진짜 성공
-// })
+delayP().then((res)=>{
+  console.log(res); // 진짜 성공
+})
 
 
 // delayP()
