@@ -242,7 +242,6 @@ xhrPromise.get = (url) => {
   })
 }
 
-
 xhrPromise.post = (url,body) => {
   return xhrPromise({
     url,

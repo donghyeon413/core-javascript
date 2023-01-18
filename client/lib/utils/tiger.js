@@ -8,7 +8,7 @@ const defaultOptions = {
   cache: 'no-cache',
   credential: 'same-origin',
   redirect:'follow',
-  referrerPolicy:'no-reffere',
+  referrerPolicy:'no-referrer',
   headers:{
     'Content-Type':'application/json; charset=UTF-8'
   }
@@ -16,9 +16,7 @@ const defaultOptions = {
 
 
 
-const tiger = async (options = {}) =>{
-  
-
+export const tiger = async (options = {}) =>{
 
   const {url, ...restOptions} = {
     ...defaultOptions,
@@ -26,8 +24,6 @@ const tiger = async (options = {}) =>{
     headers: {...defaultOptions.headers, ...options.headers}
   }
 
-  console.log(restOptions);
-  
 
   let response = await fetch(url,restOptions)
 
@@ -41,9 +37,51 @@ const tiger = async (options = {}) =>{
 }
 
 
-// tiger({
 
-// })
+tiger.get = async (url,options) => {
+  return tiger({
+    url,
+    ...options
+  })
+}
+
+tiger.post = (url,body,options) =>{
+  return tiger({
+    method:'POST',
+    url,
+    body:JSON.stringify(body),
+    ...options
+  })
+}
+
+tiger.put = (url,body,options) =>{
+  return tiger({
+    method:'PUT',
+    url,
+    body:JSON.stringify(body),
+    ...options
+  })
+}
+
+tiger.delete = (url,options) =>{
+  return tiger({
+    method:'DELETE',
+    url,
+    ...options
+  })
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
