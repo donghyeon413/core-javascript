@@ -191,7 +191,7 @@ const defaultOptions = {
 }
 
 
-function xhrPromise(options = {}){
+export function xhrPromise(options = {}){
   
 
   const xhr = new XMLHttpRequest();
@@ -235,7 +235,23 @@ xhrPromise({
 })
 
 
+xhrPromise.get = (url) =>{
+  return xhrPromise({
+    url
+  })
 
+
+}
+
+
+xhrPromise
+.get('www.naver.com')
+.then((res)=>{
+  res
+})
+.catch((err)=>{
+  err
+})
 
 
 
