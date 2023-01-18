@@ -12,6 +12,7 @@
 
 // xhrData 함수 만들기 method, url 
 
+
 export function xhrData({
   url = '',
   method = 'GET',
