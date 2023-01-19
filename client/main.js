@@ -1,31 +1,52 @@
 
 
-
-
 import { 
-  xhrData,
   insertLast,
-  xhrPromise,
   tiger,
-  delayP
+  delayP,
+  createUserCard,
+  getNode
  } from "./lib/index.js";
 
 
 
- 
-
- async function render(){
-
-   await delayP(2000);
-   let response = await tiger.get('https://jsonplaceholder.typicode.com/users/1')
+// rendingUserList 함수 만들기 
+// ajax (tiger) get user List
 
 
+// 유저 카드 생성
+// 생성된 카드로 랜더링 
 
-   console.log(response.data);
- }
+//  1. userList.js로 갑니다.
+//  2. renderUserCard 함수를 만들기
+//  3. 만들어진 함수 안에 createUserCard를 던지고,
+//  4. renderUserCard함수를 사용했을 떄 렌더링이 잘 될 수 있도록.
+
+const userCardContainer = getNode('.user-card-inner');
+
+async function rendingUserList(){
+  
+  let response = await tiger.get('https://jsonplaceholder.typicode.com/users/1')
+  
+  let userData = response.data;
+
+  console.log(userData);
+
+  renderUserCard()
+
+  insertLast('userCardContainer',createUserCard(userData))
 
 
- render()
+}
+
+
+
+rendingUserList();
+
+
+
+
+
 
 
 
